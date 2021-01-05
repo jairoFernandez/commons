@@ -7,6 +7,20 @@
     "~/development/dart-sdk"
   ],
   "workbench.colorCustomizations": {
-    "activityBar.background": "#3f969c"
-  }
+    "activityBar.background": "#3f969c",
+    "activityBar.activeBackground": "#3f969c",
+    "activityBar.activeBorder": "#e3bbe1",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#e3bbe1",
+    "activityBarBadge.foreground": "#15202b",
+    "statusBar.background": "#307378",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#3f969c",
+    "titleBar.activeBackground": "#307378",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#30737899",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  },
+  "peacock.color": "#307378"
 }

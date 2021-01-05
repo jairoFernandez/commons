@@ -55,7 +55,7 @@ services:
       - base-commons
     restart: always
   pgadmin_global:
-    image: dpage/pgadmin4:4.10
+    image: dpage/pgadmin4:4.29
     container_name: "pgadmin_global"
     depends_on:
       - postgres_global_9
@@ -65,10 +65,12 @@ services:
       PGADMIN_DEFAULT_EMAIL: pgadmin4@pgadmin.org
       PGADMIN_DEFAULT_PASSWORD: admin
     volumes:
-      - ./.pgadmin/:/var/lib/pgadmin
+      - pgadmin:/var/lib/pgadmin
     networks:
       - base-commons
     restart: always
+volumes:
+  pgadmin:
 networks:
   base-commons:
     driver: "bridge"
