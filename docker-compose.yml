@@ -50,7 +50,19 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - ./.data_postgres:/var/lib/postgresql/data
+      - postgres_9:/var/lib/postgresql/data
+    networks:
+      - base-commons
+    restart: always
+  postgres_global_10:
+    image: "postgres:10"
+    environment:
+      POSTGRES_PASSWORD: postgres
+    container_name: "postgres_global_10"
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_10:/var/lib/postgresql/data
     networks:
       - base-commons
     restart: always
@@ -71,6 +83,8 @@ services:
     restart: always
 volumes:
   pgadmin:
+  postgres_10:
+  postgres_9:
 networks:
   base-commons:
     driver: "bridge"
