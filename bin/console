@@ -7,6 +7,7 @@ source ${ALIAS_ORG_ACTUAL_DIR}/bin/aqueduct.sh
 source ${ALIAS_ORG_ACTUAL_DIR}/bin/flutter.sh
 source ${ALIAS_ORG_ACTUAL_DIR}/bin/plain_dart.sh
 source ${ALIAS_ORG_ACTUAL_DIR}/bin/bump-version.sh
+source ${ALIAS_ORG_ACTUAL_DIR}/bin/get_changes.sh
 
 COMMAND=$1
 ARG=$2
@@ -42,6 +43,10 @@ case $COMMAND in
     echo "Setting SDK dart $NEW_ARGS"
     set_dart_sdk $NEW_ARGS
     ;;
+  "mirror_changes")
+    echo "Mirror changes from repo $NEW_ARGS"
+    mirror_changes $NEW_ARGS
+    ;;
   "set_env")
     echo "Set environment file to actual $NEW_ARGS"
     read_file $NEW_ARGS
@@ -70,6 +75,7 @@ case $COMMAND in
     echo -e "- ${ALIAS_TOOLS_F}_console ${GREEN}dart_list${NOCOLOR}                  : Show actual SDK dart"
     echo -e "- ${ALIAS_TOOLS_F}_console ${GREEN}set_dart_sdk${NOCOLOR} ${ORANGE}<option>${NOCOLOR}      : Set SDK dart, ej: ${ALIAS_TOOLS_F}_console ${GREEN}set_dart_sdk${NOCOLOR} ${ORANGE}2.7.0${NOCOLOR}"
     echo -e "- ${ALIAS_TOOLS_F}_console ${GREEN}project${NOCOLOR} ${ORANGE}<option>${NOCOLOR}           : Show different options for projects"
+    echo -e "- ${ALIAS_TOOLS_F}_console ${GREEN}mirror_changes${NOCOLOR} ${ORANGE}<option>${NOCOLOR}    : Get changes from repo git, ex: ${ALIAS_TOOLS_F}_console ${GREEN}mirror_changes${NOCOLOR} ${ORANGE}git@github.com:jairoFernandez/commons.git remote_branch new_local_branch${NOCOLOR}"
     ;;
 esac
 
