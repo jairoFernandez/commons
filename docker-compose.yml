@@ -78,6 +78,7 @@ services:
       PGADMIN_DEFAULT_PASSWORD: admin
     volumes:
       - pgadmin:/var/lib/pgadmin
+      - ./.test/backups:/var/lib/pgadmin/storage/pgadmin4_pgadmin.org
     networks:
       - base-commons
     restart: always
