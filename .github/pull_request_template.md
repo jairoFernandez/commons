@@ -4,7 +4,7 @@ Please include a summary of the change and which issue is fixed. Please also inc
 
 ## Link to history user
 
-[NFAPP-example](https://fundefir.atlassian.net/browse/NFAPP-example)
+[NFAPP-example](https://common.atlassian.net/browse/NFAPP-example)
 
 Fixes # (issue)
 

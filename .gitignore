@@ -2,6 +2,7 @@
 /.pgadmin
 /.data_postgres
 /.pgadmin
-/.bashfundefir_profile
+/.bashcommon_profile
+.bash_common_rc
 .bash_fundefir_rc
 .test

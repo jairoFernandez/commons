@@ -1,10 +1,8 @@
-# Common tools for Fundefir
+# Common tools for common
 
 ### Getting started
 
 Execute the installing ❤️ `./install.sh`, it's all, please refresh your terminal.
-
-![Commands](./doc/command.png)
 
 For view all the services available:
 

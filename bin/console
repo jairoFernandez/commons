@@ -71,7 +71,7 @@ case $COMMAND in
 
     echo -e "- ${ALIAS_TOOLS_F}_console ${GREEN}bump_version${NOCOLOR}                                  : Generate a Bumb version"
     echo -e "- ${ALIAS_TOOLS_F}_console ${GREEN}dart_sdk${NOCOLOR} ${ORANGE}number_version${NOCOLOR}    : Install SDK, ej: ${ALIAS_TOOLS_F}_console ${GREEN}dart_sdk${NOCOLOR} ${ORANGE}2.7.0${NOCOLOR}"
-    echo -e "- ${ALIAS_TOOLS_F}_console ${GREEN}set_env${NOCOLOR} ${ORANGE}env_file${NOCOLOR}           : Set environment file, ej: ${ALIAS_TOOLS_F}_console ${GREEN}env_file${NOCOLOR} ${ORANGE}.env${NOCOLOR}"
+    echo -e "- ${ALIAS_TOOLS_F}_console ${GREEN}set_env${NOCOLOR} ${ORANGE}env_file${NOCOLOR}           : Set environment file, ej: ${ALIAS_TOOLS_F}_console ${GREEN}set_env${NOCOLOR} ${ORANGE}.env${NOCOLOR}"
     echo -e "- ${ALIAS_TOOLS_F}_console ${GREEN}dart_list${NOCOLOR}                  : Show actual SDK dart"
     echo -e "- ${ALIAS_TOOLS_F}_console ${GREEN}set_dart_sdk${NOCOLOR} ${ORANGE}<option>${NOCOLOR}      : Set SDK dart, ej: ${ALIAS_TOOLS_F}_console ${GREEN}set_dart_sdk${NOCOLOR} ${ORANGE}2.7.0${NOCOLOR}"
     echo -e "- ${ALIAS_TOOLS_F}_console ${GREEN}project${NOCOLOR} ${ORANGE}<option>${NOCOLOR}           : Show different options for projects"
