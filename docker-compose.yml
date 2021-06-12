@@ -67,23 +67,27 @@ services:
       - base-commons
     restart: always
   pgadmin_global:
-    image: dpage/pgadmin4:4.29
+    image: dpage/pgadmin4:5.3
     container_name: "pgadmin_global"
-    depends_on:
-      - postgres_global_9
+    # depends_on:
+    #   - postgres_global_9
     ports:
       - "5555:80"
     environment:
       PGADMIN_DEFAULT_EMAIL: pgadmin4@pgadmin.org
       PGADMIN_DEFAULT_PASSWORD: admin
+      PGADMIN_CONFIG_ENHANCED_COOKIE_PROTECTION: "True"
+      # PGADMIN_CONFIG_LOGIN_BANNER: "Authorised_only_user"
+      PGADMIN_CONFIG_CONSOLE_LOG_LEVEL: 10
+      PGADMIN_CONFIG_SERVER_MODE: "False"
     volumes:
-      - pgadmin:/var/lib/pgadmin
-      - ./.test/backups:/var/lib/pgadmin/storage/pgadmin4_pgadmin.org
+      - pgadmin4:/var/lib/pgadmin
+      - ./.backups/backups:/var/lib/pgadmin/storage/pgadmin4_pgadmin.org
     networks:
       - base-commons
     restart: always
 volumes:
-  pgadmin:
+  pgadmin4:
   postgres_10:
   postgres_9:
 networks:
