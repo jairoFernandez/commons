@@ -35,8 +35,10 @@ mirror_changes() {
 
     rm -rf /tmp/mirror-repo
     mkdir /tmp/mirror-repo && cd /tmp/mirror-repo
-    git clone --branch ${remote_branch} ${mirror} temporal
+    git clone ${mirror} temporal
     cd temporal
+    git fetch
+    git checkout ${remote_branch}
     rm -rf .git
     ls
     cp -R . ${actual_dir}
